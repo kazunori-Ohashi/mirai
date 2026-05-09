@@ -541,13 +541,6 @@ details p {
   font-size: 1rem;
 }
 
-.placeholder-note {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 0.82rem;
-  line-height: 1.6;
-}
-
 .site-footer {
   color: #fff;
   background: linear-gradient(90deg, #ee83a8 0%, #e95f8e 100%);
