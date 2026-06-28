@@ -236,6 +236,7 @@ h1 {
 }
 
 .section {
+  scroll-margin-top: 106px;
   padding: clamp(54px, 7vw, 86px) 20px;
 }
 
@@ -255,6 +256,121 @@ h1 {
 .section h2 span {
   color: var(--pink);
   font-size: 1.25em;
+}
+
+.summer-school {
+  background: linear-gradient(180deg, #eaf7ff 0%, #fffdf8 100%);
+}
+
+.summer-school-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(330px, 0.78fr);
+  gap: clamp(30px, 5vw, 64px);
+  align-items: center;
+}
+
+.summer-school-copy h2 {
+  text-align: left;
+  margin-bottom: 18px;
+  color: #0b4fb8;
+}
+
+.summer-lead {
+  font-size: clamp(1.02rem, 1.7vw, 1.2rem);
+  font-weight: 800;
+}
+
+.summer-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.summer-meta div {
+  display: grid;
+  align-content: start;
+  min-height: 150px;
+  padding: 18px;
+  border: 2px solid #7cc4ef;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.summer-meta div:nth-child(2) {
+  border-color: #d1c942;
+}
+
+.summer-meta div:nth-child(3) {
+  border-color: var(--green);
+}
+
+.summer-meta span,
+.summer-meta small {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.summer-meta strong {
+  margin: 8px 0 4px;
+  color: #e94918;
+  font-size: clamp(1.24rem, 2vw, 1.64rem);
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.summer-goals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.summer-goals li {
+  position: relative;
+  padding-left: 30px;
+  font-weight: 800;
+}
+
+.summer-goals li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 15px;
+  height: 8px;
+  border-left: 4px solid #0b63c7;
+  border-bottom: 4px solid #0b63c7;
+  transform: rotate(-45deg);
+}
+
+.summer-discount {
+  margin: 24px 0 26px;
+  padding: 13px 18px;
+  border-radius: 8px;
+  background: #fff3a1;
+  color: #7b4a00;
+  font-weight: 900;
+}
+
+.summer-button {
+  width: min(330px, 100%);
+}
+
+.summer-flyer {
+  margin: 0;
+}
+
+.summer-flyer img {
+  width: min(430px, 100%);
+  margin-left: auto;
+  border: 1px solid rgba(11, 79, 184, 0.18);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
 }
 
 .features {
@@ -673,8 +789,14 @@ address {
   .feature-grid,
   .price-grid,
   .flow-inner,
+  .summer-school-inner,
   .faq-layout {
     grid-template-columns: 1fr;
+  }
+
+  .summer-flyer img {
+    width: min(560px, 100%);
+    margin: 0 auto;
   }
 
   .feature {
@@ -706,6 +828,10 @@ address {
     position: relative;
     min-height: auto;
     padding: 12px 16px 16px;
+  }
+
+  .section {
+    scroll-margin-top: 0;
   }
 
   .brand img {
@@ -749,6 +875,11 @@ address {
   }
 
   .flow-list {
+    grid-template-columns: 1fr;
+  }
+
+  .summer-meta,
+  .summer-goals {
     grid-template-columns: 1fr;
   }
 
